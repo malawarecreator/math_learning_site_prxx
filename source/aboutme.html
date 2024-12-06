@@ -22,19 +22,63 @@
         h1 {
             font-size: 4rem; /* Large font size for the heading */
             color: #333; /* Dark color for the heading */
+            text-align: center;
+            margin-bottom: 20px; /* Space between the heading and the input */
         }
 
+        /* Style for the input box */
+        .input-box {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 400px; /* Limit the width of the input */
+        }
+        .button {
+            background-color: #fff;
+            border: 0 solid #e2e8f0;
+            border-radius: 1.5rem;
+            box-sizing: border-box;
+            color: #0d172a;
+            cursor: pointer;
+            display: inline-block;
+            font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1;
+            padding: 1rem 1.6rem;
+            text-align: center;
+            text-decoration: none #0d172a solid;
+            text-decoration-thickness: auto;
+            transition: all .1s cubic-bezier(.4, 0, .2, 1);
+            box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+        .button:hover {
+            background-color: #1e293b;
+            color: #fff;
+            }
+
+        @media (min-width: 768px) {
+            .button {
+                font-size: 1.125rem;
+                padding: 1rem 2rem;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Heading with "BASEFILE" -->
     <h1><center>BASEFILE- About Us</center></h1><br>
-    <p>Hi! We’re Bhanja and Sameek, two 7th graders who created our own proxy to help people browse the internet more safely. 
-       We noticed that sometimes websites block content or track your every move online, and we wanted to find a way to keep things private.
-       So, we worked together to build a simple proxy that helps hide your real location and keeps your online activity private. 
-       Our goal is to help everyone browse the internet freely and safely, without worrying about privacy issues or restrictions. 
-       We’re excited to share our project and hope it can make the internet a better place for everyone!
-       Credit: Benjamin Liu, Sameek Bhanja</p>
-    <a>
+    <p><center>Hi! We’re Benjamin and Sameek, two 7th graders who created our own proxy to help people browse the internet more safely.<br>
+        We noticed that sometimes websites block content or track your every move online, and we wanted to find a way to keep things private. <br>
+        So, we worked together to build a simple proxy that helps hide your real location and keeps your online activity private. <br>
+        Our goal is to help everyone browse the internet freely and safely, without worrying about privacy issues or restrictions. <br>
+        We’re excited to share our project and hope it can make the internet a better place for everyone! <br>
+        Credit: Benjamin Liu, Sameek Bhanja</center></p>
+    <a href="aboutme.html"><button class="button" role="button">Back To Searching!</button></a>
 </body>
 </html>
