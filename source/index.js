@@ -3,22 +3,48 @@ const express = require("express")
 const path = require("path")
 
 const app = express();
-let visitorcount = 0
+
 app.get("/", (req, res, next) => {
-    res.cookie("visitornum", `${visitorcount}`)
-    console.log("cookie set for user " + visitorcount)
-    
-    next()
+
+
+    switch (req.query.id) {
+        case "ben_dev":
+            console.log("ben authed")
+            next()
+            break
+        case "sameek_dev":
+            console.log("tim authed")
+            next()
+            break
+        case undefined:
+            res.sendFile(path.join(__dirname, "/access_denied.html"))
+            console.log("user denied access")
+            break
+
+    }
     
 }, (req, res) => {
     res.sendFile(path.join(__dirname, "/home.html"))
 }
 );
 app.get("/aboutme",(req, res, next) => {
-    res.cookie("visitornum", `${visitorcount}`)
-    console.log(`cookie set for user ${visitorcount}`)
+    switch (req.query.id) {
+        case "ben_dev":
+            console.log("ben authed")
+            next()
+            break
+        case "sameek_dev":
+            console.log("tim authed")
+            next()
+            break
+        default:
+            res.sendFile(path.join(__dirname, "/access_denied.html"))
+            console.log("user denied access")
+            break
+
+    }
     
-    next()
+
 } ,(req, res) => {
     res.sendFile(path.join(__dirname, "/aboutme.html"))
 })
