@@ -8,7 +8,7 @@ const auth_middleware = (req, res, next) => {
             next()
             break
         case "sameek_dev":
-            console.log("tim authed")
+            console.log("sameek authed")
             next()
             break
         case undefined:
