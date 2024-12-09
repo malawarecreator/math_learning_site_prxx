@@ -7,7 +7,7 @@ const auth_middleware = (req, res, next) => {
             console.log("ben authed")
             next()
             break
-        case "sameek_dev":
+        case "neon_dev":
             console.log("sameek authed")
             next()
             break
@@ -21,3 +21,4 @@ const auth_middleware = (req, res, next) => {
 
 
 module.exports = auth_middleware
+
