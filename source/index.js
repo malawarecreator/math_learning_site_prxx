@@ -10,11 +10,11 @@ app.use(cookieParser()); // Correctly use cookie-parser middleware
 app.use(auth_middleware); // Use auth_middleware after cookie-parser
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "/home.html"));
+    res.sendFile(path.join(__dirname, "./html/home.html"));
 });
 
 app.get("/aboutme", (req, res) => {
-    res.sendFile(path.join(__dirname, "/aboutme.html"));
+    res.sendFile(path.join(__dirname, "./html/aboutme.html"));
 });
 
 app.get("/setcookie", setcookie, (req, res) => {

@@ -13,14 +13,14 @@ const auth_middleware = (req, res, next) => {
             console.log("sameek authed");
             return next();
         default:
-            res.sendFile(path.join(__dirname, "/access_denied.html"));
+            res.sendFile(path.join(__dirname, "./html/access_denied.html"));
             console.log("user denied access");
             return;
     }
 };
 
 const setcookie = (req, res, next) => {
-    res.cookie("authed", "true");
+    res.cookie("authed", "true", {maxAge: 172800000});
     next();
 };
 
